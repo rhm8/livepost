@@ -1,0 +1,42 @@
+[1mdiff --git a/Gemfile b/Gemfile[m
+[1mindex bb69d70..b0e6470 100644[m
+[1m--- a/Gemfile[m
+[1m+++ b/Gemfile[m
+[36m@@ -53,3 +53,5 @@[m [mend[m
+ [m
+ # Windows does not include zoneinfo files, so bundle the tzinfo-data gem[m
+ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby][m
+[32m+[m
+[32m+[m[32mgem 'kaminari'[m
+\ No newline at end of file[m
+[1mdiff --git a/Gemfile.lock b/Gemfile.lock[m
+[1mindex f43caf2..5c19080 100644[m
+[1m--- a/Gemfile.lock[m
+[1m+++ b/Gemfile.lock[m
+[36m@@ -66,6 +66,18 @@[m [mGEM[m
+       concurrent-ruby (~> 1.0)[m
+     jbuilder (2.9.1)[m
+       activesupport (>= 4.2.0)[m
+[32m+[m[32m    kaminari (1.1.1)[m
+[32m+[m[32m      activesupport (>= 4.1.0)[m
+[32m+[m[32m      kaminari-actionview (= 1.1.1)[m
+[32m+[m[32m      kaminari-activerecord (= 1.1.1)[m
+[32m+[m[32m      kaminari-core (= 1.1.1)[m
+[32m+[m[32m    kaminari-actionview (1.1.1)[m
+[32m+[m[32m      actionview[m
+[32m+[m[32m      kaminari-core (= 1.1.1)[m
+[32m+[m[32m    kaminari-activerecord (1.1.1)[m
+[32m+[m[32m      activerecord[m
+[32m+[m[32m      kaminari-core (= 1.1.1)[m
+[32m+[m[32m    kaminari-core (1.1.1)[m
+     listen (3.1.5)[m
+       rb-fsevent (~> 0.9, >= 0.9.4)[m
+       rb-inotify (~> 0.9, >= 0.9.7)[m
+[36m@@ -169,6 +181,7 @@[m [mDEPENDENCIES[m
+   byebug[m
+   coffee-rails (~> 4.2)[m
+   jbuilder (~> 2.5)[m
+[32m+[m[32m  kaminari[m
+   listen (>= 3.0.5, < 3.2)[m
+   mysql2 (>= 0.4.4, < 0.6.0)[m
+   puma (~> 3.11)[m
