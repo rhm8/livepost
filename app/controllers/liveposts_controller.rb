@@ -8,7 +8,7 @@ class LivepostsController < ApplicationController
       flash[:success] = '投稿完了しました。'
       redirect_to root_url
     else
-      @liveposts = current_user.liveposts.order(id: :desc).page(params[:page])
+      @liveposts = current_user.feed_liveposts.order(id: :desc).page(params[:page])
       flash.now[:danger] = '投稿できませんでした。'
       render 'toppages/index'
     end
@@ -30,12 +30,6 @@ class LivepostsController < ApplicationController
     @livepost = current_user.liveposts.find_by(id: params[:id])
     unless @livepost
     redirect_to root_url
-    end
-  end
-  
-  def require_user_logged_in
-    unless logged_in?
-      redirect_to login_url
     end
   end
 end
